@@ -3,8 +3,9 @@
    <div>
       <p>my-first3 contains 2 other folders:</p>
       <ul>
-         <li>my-first3-m (that contains a module to exporting this component content to application on browser module)</li>
-         <li>my-first-c (that contains the component files)</li>
+         <li *ngFor="let folder of folders">
+            {{ folder }}
+         </li>
       </ul>
    </div>
 </div>
