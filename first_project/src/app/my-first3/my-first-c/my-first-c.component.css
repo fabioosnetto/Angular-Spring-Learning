@@ -1,0 +1,9 @@
+#my-first-c-div{
+   font-family: monospace;
+   background-color: rgb(97, 0, 0);
+   color: white;
+   padding: 1em;
+   margin-bottom: 3em;
+
+   border-radius: 10px;
+}

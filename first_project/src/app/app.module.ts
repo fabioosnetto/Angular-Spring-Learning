@@ -5,17 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyFirst2Component } from './my-first2/my-first2.component';
 import { MyFirstModule } from "./my-first/my-first/my-first.module";
+import { MyFirst3MModule } from "./my-first3/my-first3-m/my-first3-m.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyFirst2Component
+    MyFirst2Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MyFirstModule,
+    MyFirst3MModule,
     BrowserAnimationsModule
   ],
   providers: [],
