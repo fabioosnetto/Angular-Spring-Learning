@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyFirst3SService } from "../my-first3-s/my-first3-s.service";
 
 @Component({
   selector: 'my-first-c',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyFirstCComponent implements OnInit {
   
-  folders: string[] = ['my-first3-m (that contains a module to exporting this component content to application on browser module)', 'my-first-c (that contains the component files)'];
+  folders: string[] = [];
   
-  constructor(){
+  constructor(private myfirst3sservice : MyFirst3SService){
+    this.folders = this.myfirst3sservice.getFolders();
   }
 
   ngOnInit(){
