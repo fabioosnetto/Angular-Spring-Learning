@@ -58,6 +58,16 @@ select{
    border-radius: 7px;
 }
 
+#input_event_twoway{
+   display: flex;
+   flex-direction: row;
+   flex: 50%;
+}
+
+#input_event_twoway > div{
+   padding: 1em;
+}
+
 #btn_binding{
    background-color: rgb(44, 44, 44);
    font-family: monospace;

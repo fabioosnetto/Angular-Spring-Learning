@@ -37,14 +37,36 @@
          Studiyng about Event Binding!
       </p>
       
-      <input type="text"
-      #eventinput
-      (keyup)="onKeyUp(eventinput.value)"
-      (keyup.w)="onKeyEnter(eventinput.value)"
-      (blur)="onKeyEnter(eventinput.value)">
+      <div id="input_event_twoway">
+         <div>
+            <input type="text"
+            #eventinput
+            (keyup)="onKeyUp(eventinput.value)"
+            (keyup.w)="onKeyEnter(eventinput.value)"
+            (blur)="onKeyEnter(eventinput.value)">
+            <p>Typing: "{{ keyupvalue }}"</p>
+            <p>Saved: "{{ keyentervalue }}"</p>
+         </div>
 
-      <p>Typing: "{{ keyupvalue }}"</p>
-      <p>Saved: "{{ keyentervalue }}"</p>
+         <div>
+            <!--<input type="text"
+            #eventvalue
+            [value]="keyupvalue_twoway"
+            (input)="keyupvalue_twoway = eventvalue.value">
+            <p>Typing: "{{ keyupvalue_twoway }}"</p>-->
+
+            <!--<input type="text"
+            #eventvalue
+            [ngModel]="keyupvalue_twoway"
+            (ngModelChange)="keyupvalue_twoway = eventvalue.value">
+            <p>Typing: "{{ keyupvalue_twoway }}"</p>-->
+
+            <input type="text"
+            #eventvalue
+            [(ngModel)]="keyupvalue_twoway">
+            <p>My name is {{ keyupvalue_twoway }}</p>
+         </div>
+      </div>
 
       <button id="btn_binding" (click)="btnClick()">
          Event Binding!

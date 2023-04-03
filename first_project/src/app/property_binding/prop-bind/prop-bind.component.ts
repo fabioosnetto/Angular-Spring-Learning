@@ -17,6 +17,8 @@ export class PropBindComponent implements OnInit {
   keyupvalue: string = '';
   keyentervalue: string = '';
 
+  keyupvalue_twoway: string = 'Two-Way Data Binding';
+
   onMouseOverOut(){
     this.mouseover = !this.mouseover;
   }
