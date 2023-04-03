@@ -1,0 +1,27 @@
+.prop-bind{
+   background-color: black;
+   padding: 1em 3em;
+   margin-bottom: 5em;
+   border-radius: 10px;
+}
+
+.bind_interpol{
+   padding: 1.5em;
+   border-radius: 10px;
+   margin: 2em 0em 4em 0em;
+}
+
+.alert-danger{
+   background-color: lightcoral;
+   color: red;
+}
+
+.alert-warning{
+   background-color: lightsalmon;
+   color: orangered;
+}
+
+.alert-success{
+   background-color: lightgreen;
+   color: green;
+}

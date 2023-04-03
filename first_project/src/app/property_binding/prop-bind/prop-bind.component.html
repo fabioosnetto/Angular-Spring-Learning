@@ -1,0 +1,11 @@
+<div class="prop-bind">
+   <select #styl_class (change)="0">
+      <option value="alert-danger">Danger</option>
+      <option value="alert-warning">Warning</option>
+      <option value="alert-success">Success</option>
+   </select>
+
+   <div class="bind_interpol {{ styl_class.value }}">
+      <p>{{ interpolation }}</p>
+   </div>
+</div>
