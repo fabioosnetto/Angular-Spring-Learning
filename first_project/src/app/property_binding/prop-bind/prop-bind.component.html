@@ -62,9 +62,8 @@
             <p>Typing: "{{ keyupvalue_twoway }}"</p>-->
 
             <input type="text"
-            #eventvalue
             [(ngModel)]="keyupvalue_twoway">
-            <p>My name is {{ keyupvalue_twoway }}</p>
+            <p>My name is {{ keyupvalue_twoway }} (<my-first-component [thename]="myname"></my-first-component>)</p>
          </div>
       </div>
 
