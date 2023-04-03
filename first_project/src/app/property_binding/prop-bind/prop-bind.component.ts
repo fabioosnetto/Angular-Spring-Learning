@@ -13,5 +13,25 @@ export class PropBindComponent implements OnInit {
     this.interpolation = this.propbindservie.getInterpolationContent();
   }
 
+  mouseover: boolean = false;
+  keyupvalue: string = '';
+  keyentervalue: string = '';
+
+  onMouseOverOut(){
+    this.mouseover = !this.mouseover;
+  }
+
+  onKeyUp(value:any){
+    this.keyupvalue = value;
+  }
+
+  onKeyEnter(value:any){
+    this.keyentervalue = value;
+  }
+
+  btnClick(){
+    alert('Event Binding Button Clicked!');
+  }
+
   ngOnInit(){}
 }

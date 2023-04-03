@@ -1,14 +1,22 @@
 .prop-bind{
+   font-family: monospace;
    background-color: black;
    padding: 1em 3em;
-   margin-bottom: 5em;
+   margin-bottom: 2.5em;
    border-radius: 10px;
+}
+
+select{
+   background-color: rgb(61, 61, 61);
+   color: white;
+   padding: 1em;
+   border-radius: 5px;
 }
 
 .bind_interpol{
    padding: 1.5em;
    border-radius: 10px;
-   margin: 2em 0em 4em 0em;
+   margin: 2em 0em 2em 0em;
 }
 
 .alert-danger{
@@ -24,4 +32,43 @@
 .alert-success{
    background-color: lightgreen;
    color: green;
+}
+
+.class_styl_b{
+   padding: 1em;
+   border-radius: 5px;
+   border: 2px solid white;
+   margin-bottom: 1em;
+}
+
+.event_binding{
+   background-color: black;
+   color: white;
+   font-family: monospace;
+   padding: 1em 2em;
+   margin-bottom: 4em;
+   border-radius: 10px;
+}
+
+.highlight{
+   background-color: rgba(229, 255, 0, 0.836);
+   color: white;
+   font-weight: bold;
+   cursor: context-menu;
+   border-radius: 7px;
+}
+
+#btn_binding{
+   background-color: rgb(44, 44, 44);
+   font-family: monospace;
+   color: white;
+   border-radius: 7px;
+   padding: .5em;
+   border: 1px solid white;
+}
+
+#btn_binding:hover{
+   background-color: gray;
+   font-weight: bold;
+   cursor: pointer;
 }

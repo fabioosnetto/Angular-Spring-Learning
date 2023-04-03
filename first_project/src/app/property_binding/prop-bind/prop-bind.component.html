@@ -1,11 +1,53 @@
-<div class="prop-bind">
-   <select #styl_class (change)="0">
-      <option value="alert-danger">Danger</option>
-      <option value="alert-warning">Warning</option>
-      <option value="alert-success">Success</option>
-   </select>
+<div>
+   <div class="prop-bind">
+      <select id="prop-bind-select" #styl_class (change)="0">
+         <option value="alert-danger">Danger</option>
+         <option value="alert-warning">Warning</option>
+         <option value="alert-success">Success</option>
+      </select>
+   
+      <div class="bind_interpol {{ styl_class.value }}">
+         <p>{{ interpolation }}</p>
+      </div>
+   
+      <div class="class_styl_b"
+         [class.alert-danger]="styl_class.value == 'alert-danger'"
+         [style.display]="styl_class.value == 'alert-danger'? 'block' : 'none'">
+         Studying
+      </div>
+   
+      <div class="class_styl_b"
+         [class.alert-warning]="styl_class.value == 'alert-warning'"
+         [style.display]="styl_class.value == 'alert-warning'? 'block' : 'none'">
+         Class and Style
+      </div>
+   
+      <div class="class_styl_b"
+         [class.alert-success]="styl_class.value == 'alert-success'"
+         [style.display]="styl_class.value == 'alert-success'? 'block' : 'none'">
+         Binding!
+      </div>
+   </div>
+   
+   <div class="event_binding">
+      <p style="padding: .5em; font-family: monospace;"
+         (mouseover)="onMouseOverOut()"
+         (mouseout)="onMouseOverOut()"
+         [class.highlight]="mouseover">
+         Studiyng about Event Binding!
+      </p>
+      
+      <input type="text"
+      #eventinput
+      (keyup)="onKeyUp(eventinput.value)"
+      (keyup.w)="onKeyEnter(eventinput.value)"
+      (blur)="onKeyEnter(eventinput.value)">
 
-   <div class="bind_interpol {{ styl_class.value }}">
-      <p>{{ interpolation }}</p>
+      <p>Typing: "{{ keyupvalue }}"</p>
+      <p>Saved: "{{ keyentervalue }}"</p>
+
+      <button id="btn_binding" (click)="btnClick()">
+         Event Binding!
+      </button>
    </div>
 </div>
