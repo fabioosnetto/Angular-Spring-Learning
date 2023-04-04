@@ -71,7 +71,10 @@
          Event Binding!
       </button>
       
-      <input-property [var1]="text1" [var2]="text2" [var3]="text3"></input-property>
+      <input-property [var1]="text1" [var2]="text2" [var3]="text3">
+         <ng-content select=".ng_title"></ng-content>
+         <ng-content select=".ng_body"></ng-content>
+      </input-property>
 
       <counter [value]="7"
          (changevalue)="changeValue($event)">

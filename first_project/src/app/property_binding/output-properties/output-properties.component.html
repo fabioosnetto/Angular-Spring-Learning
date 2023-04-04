@@ -3,8 +3,18 @@
       <p>Output Properties</p>
    </div>
    <div>
-      <button class="btn" (click)="sumValue()">+</button>
+      <button [ngClass]="{
+         'btn': !btnclicked,
+         'btn-clicked': btnclicked
+      }"
+      (click)="sumValue()">+</button>
+
       <input type="text" class="resultinput" size="4" [value]="resultvalue" #outputinput readonly>
-      <button class="btn" (click)="decreaseValue()">-</button>
+      
+      <button [ngClass]="{
+         'btn': !btnclicked,
+         'btn-clicked': btnclicked
+      }"
+      class="btn" (click)="decreaseValue()">-</button>
    </div>
 </section>

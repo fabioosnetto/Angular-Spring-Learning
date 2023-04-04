@@ -12,16 +12,20 @@ export class OutputPropertiesComponent implements OnInit{
   @Output('changevalue') changevalue = new EventEmitter();
   @ViewChild('outputinput') output!: ElementRef;
 
+  btnclicked: boolean = false;
+
   sumValue(){
     this.resultvalue ++;
     console.log(this.output.nativeElement.value);
     this.changevalue.emit({newvalue: this.resultvalue});
+    this.btnclicked = !this.btnclicked;
   }
 
   decreaseValue(){
     this.resultvalue --;
     console.log(this.output.nativeElement.value);
     this.changevalue.emit({newvalue: this.resultvalue});
+    this.btnclicked = !this.btnclicked;
   }
 
   

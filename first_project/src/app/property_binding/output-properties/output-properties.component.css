@@ -15,8 +15,32 @@ div{
 
 .btn{
    font-family: monospace;
-   font-size: 1.2em;
+   font-size: 1.5em;
+   font-weight: bolder;
    background-color: darkblue;
+   color: white;
+   border: 1px solid white;
+
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+
+   border-radius: 7px;
+   padding: 1em;
+   width: 2em;
+   height: 2em;
+   margin: 1em;
+
+   transition: 1s ease;
+}
+
+.btn-clicked{
+   font-family: monospace;
+   font-size: 1.5em;
+   font-weight: bolder;
+   background-color: lightskyblue;
+   color: white;
    border: 1px solid white;
 
    display: flex;
@@ -34,6 +58,11 @@ div{
 }
 
 .btn:hover{
+   transform: translate(.2em, .2em);
+   cursor: pointer;
+}
+
+.btn-clicked:hover{
    transform: translate(.2em, .2em);
    cursor: pointer;
 }
