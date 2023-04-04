@@ -9,7 +9,7 @@ import { MyFirst3SService } from "../my-first3-s/my-first3-s.service";
 export class MyFirstCComponent implements OnInit {
   
   folders: string[] = [];
-  password: string = '';
+  password= '';
   
   constructor(private myfirst3sservice : MyFirst3SService){
     this.folders = this.myfirst3sservice.getFolders();
@@ -17,6 +17,7 @@ export class MyFirstCComponent implements OnInit {
     this.password = this.myfirst3sservice.getPassword();
   }
 
-  ngOnInit(){
+  ngOnInit(): void {
+    
   }
 }

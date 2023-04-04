@@ -6,10 +6,9 @@ import { Component, Input, OnInit } from '@angular/core'
 })
 
 export class MyFirstComponent implements OnInit{
-   constructor(){}
 
-   @Input('thename') name: string = '';
-   @Input('othername') name2 : string = '';
+   @Input('thename') name = '';
+   @Input('othername') name2 = '';
 
    ngOnInit(){}
 }
