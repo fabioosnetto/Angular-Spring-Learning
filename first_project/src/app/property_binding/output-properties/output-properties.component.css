@@ -1,0 +1,44 @@
+section{
+   background-color: rgb(22, 22, 22);
+   border-radius: 10px;
+   padding-bottom: 1em;
+   
+}
+
+div{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+}
+
+.btn{
+   font-family: monospace;
+   font-size: 1.2em;
+   background-color: darkblue;
+   border: 1px solid white;
+
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+
+   border-radius: 7px;
+   padding: 1em;
+   width: 2em;
+   height: 2em;
+   margin: 1em;
+
+   transition: 1s ease;
+}
+
+.btn:hover{
+   transform: translate(.2em, .2em);
+   cursor: pointer;
+}
+
+.resultinput{
+   height: 2em;
+   text-align: center;
+}

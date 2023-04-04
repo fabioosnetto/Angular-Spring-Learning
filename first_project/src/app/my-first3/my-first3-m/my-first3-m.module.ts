@@ -7,10 +7,12 @@ import { MyFirst3SService } from "../my-first3-s/my-first3-s.service";
 import { PropBindComponent } from "../../property_binding/prop-bind/prop-bind.component";
 import { InputPropertyComponent } from "../../property_binding/input-property/input-property.component";
 import { PropBindContentService } from "src/app/property_binding/content-service/prop-bind-content.service";
+import { OutputPropertiesComponent } from "src/app/property_binding/output-properties/output-properties.component";
 
 @NgModule({
   declarations: [
     InputPropertyComponent,
+    OutputPropertiesComponent,
     MyFirstCComponent,
     PropBindComponent
   ],

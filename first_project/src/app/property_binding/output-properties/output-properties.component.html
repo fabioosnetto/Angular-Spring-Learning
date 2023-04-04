@@ -1,1 +1,10 @@
-<p>output-properties works!</p>
+<section>
+   <div style="padding-top: 1em; font-variant: small-caps; font-size: 1.3em;">
+      <p>Output Properties</p>
+   </div>
+   <div>
+      <button class="btn" (click)="sumValue()">+</button>
+      <input type="text" class="resultinput" size="4" [value]="resultvalue" readonly>
+      <button class="btn" (click)="decreaseValue()">-</button>
+   </div>
+</section>

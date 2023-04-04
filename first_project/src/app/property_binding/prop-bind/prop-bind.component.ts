@@ -41,5 +41,9 @@ export class PropBindComponent implements OnInit {
     alert('Event Binding Button Clicked!');
   }
 
+  changeValue(_event:any){
+    console.log(_event.newvalue);
+  }
+
   ngOnInit(){}
 }
