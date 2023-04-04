@@ -21,6 +21,10 @@ export class PropBindComponent implements OnInit {
 
   myname: string = 'Fabio';
 
+  text1: string = 'Learning';
+  text2: string = 'about input';
+  text3: string = 'properties';
+
   onMouseOverOut(){
     this.mouseover = !this.mouseover;
   }
