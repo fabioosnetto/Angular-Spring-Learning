@@ -4,7 +4,7 @@
    </div>
    <div>
       <button class="btn" (click)="sumValue()">+</button>
-      <input type="text" class="resultinput" size="4" [value]="resultvalue" readonly>
+      <input type="text" class="resultinput" size="4" [value]="resultvalue" #outputinput readonly>
       <button class="btn" (click)="decreaseValue()">-</button>
    </div>
 </section>
