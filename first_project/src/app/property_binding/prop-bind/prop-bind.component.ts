@@ -61,4 +61,10 @@ export class PropBindComponent implements OnInit {
   ngOnInit(){
     this.courses = this._eventbroadcast.getCourse();
   }
+
+
+
+  asyncText = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Async Text'), 3000)
+  })
 }

@@ -15,6 +15,7 @@ import { TextBasicStyle } from "src/app/directive_learning/text/text-basic-style
 import { NgElseDirective } from "src/app/directive_learning/ngElse/ng-else.directive";
 
 import { EventBroadcastService } from "src/app/property_binding/broadcast-services/event-broadcast.service";
+import { NumMarkerPipe } from "src/app/property_binding/pipes/num-marker.pipe";
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { EventBroadcastService } from "src/app/property_binding/broadcast-servic
     PropBindComponent,
     TitleBasicStyle,
     TextBasicStyle,
-    NgElseDirective
+    NgElseDirective,
+    NumMarkerPipe
   ],
   imports: [
     MyFirstModule,
