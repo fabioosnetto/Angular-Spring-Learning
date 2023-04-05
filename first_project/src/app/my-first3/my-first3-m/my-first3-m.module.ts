@@ -8,13 +8,17 @@ import { PropBindComponent } from "../../property_binding/prop-bind/prop-bind.co
 import { InputPropertyComponent } from "../../property_binding/input-property/input-property.component";
 import { PropBindContentService } from "src/app/property_binding/content-service/prop-bind-content.service";
 import { OutputPropertiesComponent } from "src/app/property_binding/output-properties/output-properties.component";
+import { TitleBasicStyle } from "src/app/directive_learning/titles/title-basic-style";
+import { TextBasicStyle } from "src/app/directive_learning/text/text-basic-style.directive";
 
 @NgModule({
   declarations: [
     InputPropertyComponent,
     OutputPropertiesComponent,
     MyFirstCComponent,
-    PropBindComponent
+    PropBindComponent,
+    TitleBasicStyle,
+    TextBasicStyle
   ],
   imports: [
     MyFirstModule,
