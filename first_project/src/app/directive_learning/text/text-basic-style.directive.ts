@@ -1,9 +1,14 @@
-import { Directive, ElementRef, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, Renderer2, HostListener, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[text-basic-style]'
 })
 export class TextBasicStyle {
+
+  @HostListener('mouseenter') onMouseOver(){this.styles = 'red'}
+  @HostListener('mouseleave') onMouseLeave(){this.styles = 'white'}
+
+  @HostBinding('style.color') styles!: string;
 
   constructor(
     private _elementRef: ElementRef,
