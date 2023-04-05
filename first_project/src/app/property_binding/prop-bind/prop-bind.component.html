@@ -81,8 +81,20 @@
       </counter>
    </div>
 
-   <div id="directive">
+   <div id="directive" *appNgElse="bool">
       <h2 title-basic-style [bck_highlightcolor]="'yellow'" [bck_defaultcolor]="'red'">Directive Learning</h2>
       <p text-basic-style>All this div section is stylized by using directives</p>
+   </div>
+
+
+   <div class="broadcast">
+      <p>Learning about Event Broadcast (connecting a component to another by a same service)</p>
+      <input type="text" size="20"
+         #event
+         (keyup.enter)="saveCourse(event.value.toString())">
+      
+         <ul>
+         <li *ngFor="let course of courses">{{ course }}</li>
+      </ul>
    </div>
 </div>

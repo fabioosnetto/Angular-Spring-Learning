@@ -1,7 +1,9 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from '@angular/forms';
+
 import { MyFirstModule } from "src/app/my-first/my-first/my-first.module";
+
 import { MyFirstCComponent } from "../my-first-c/my-first-c.component";
 import { MyFirst3SService } from "../my-first3-s/my-first3-s.service";
 import { PropBindComponent } from "../../property_binding/prop-bind/prop-bind.component";
@@ -10,6 +12,10 @@ import { PropBindContentService } from "src/app/property_binding/content-service
 import { OutputPropertiesComponent } from "src/app/property_binding/output-properties/output-properties.component";
 import { TitleBasicStyle } from "src/app/directive_learning/titles/title-basic-style";
 import { TextBasicStyle } from "src/app/directive_learning/text/text-basic-style.directive";
+import { NgElseDirective } from "src/app/directive_learning/ngElse/ng-else.directive";
+
+import { EventBroadcastService } from "src/app/property_binding/broadcast-services/event-broadcast.service";
+
 
 @NgModule({
   declarations: [
@@ -18,7 +24,8 @@ import { TextBasicStyle } from "src/app/directive_learning/text/text-basic-style
     MyFirstCComponent,
     PropBindComponent,
     TitleBasicStyle,
-    TextBasicStyle
+    TextBasicStyle,
+    NgElseDirective
   ],
   imports: [
     MyFirstModule,
@@ -31,7 +38,8 @@ import { TextBasicStyle } from "src/app/directive_learning/text/text-basic-style
   ],
   providers: [
     MyFirst3SService,
-    PropBindContentService
+    PropBindContentService,
+    /*EventBroadcastService*/
   ]
 })
 export class MyFirst3MModule { }

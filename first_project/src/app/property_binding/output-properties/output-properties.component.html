@@ -15,6 +15,17 @@
          'btn': !btnclicked,
          'btn-clicked': btnclicked
       }"
-      class="btn" (click)="decreaseValue()">-</button>
+      (click)="decreaseValue()">-</button>
    </div>
 </section>
+
+<div class="broadcast">
+   <p>Learning about Event Broadcast (connecting a component to another by a same service)</p>
+   <input type="text" size="20"
+      #event
+      (keyup.enter)="saveCourse(event.value.toString())">
+   
+   <ul>
+      <li *ngFor="let course of courses">{{ course }}</li>
+   </ul>
+</div>

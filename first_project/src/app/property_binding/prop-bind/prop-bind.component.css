@@ -82,3 +82,11 @@ select{
    font-weight: bold;
    cursor: pointer;
 }
+
+.broadcast{
+   background-color: rgb(141, 0, 71);
+   color: white;
+   font-family: monospace;
+   padding: 1em;
+   border-radius: 10px;
+}

@@ -1,16 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { PropBindContentService } from '../content-service/prop-bind-content.service';
+import { EventBroadcastService } from "../broadcast-services/event-broadcast.service";
 
 @Component({
   selector: 'prop-bind',
   templateUrl: './prop-bind.component.html',
-  styleUrls: ['./prop-bind.component.css']
+  styleUrls: ['./prop-bind.component.css'],
+  providers: [EventBroadcastService]
 })
 export class PropBindComponent implements OnInit {
   interpolation: string = '';
 
-  constructor(private propbindservie : PropBindContentService){
-    this.interpolation = this.propbindservie.getInterpolationContent();
+  constructor(
+    private propbindservice: PropBindContentService,
+    private _eventbroadcast: EventBroadcastService 
+    ){
+    this.interpolation = this.propbindservice.getInterpolationContent();
   }
 
   mouseover: boolean = false;
@@ -42,8 +47,18 @@ export class PropBindComponent implements OnInit {
   }
 
   changeValue(_event:any){
-    console.log(_event.newvalue);
+    console.log(_event.new_value);
   }
 
-  ngOnInit(){}
+  bool: boolean = false;
+
+
+  courses: string[] = [];
+  saveCourse(course: string){
+    this._eventbroadcast.addCourse(course);
+  }
+
+  ngOnInit(){
+    this.courses = this._eventbroadcast.getCourse();
+  }
 }

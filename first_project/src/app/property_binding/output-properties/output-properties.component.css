@@ -71,3 +71,11 @@ div{
    height: 2em;
    text-align: center;
 }
+
+.broadcast{
+   background-color: rgb(141, 0, 71);
+   color: white;
+   font-family: monospace;
+   padding: 1em;
+   border-radius: 10px;
+}
